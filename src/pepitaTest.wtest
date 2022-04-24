@@ -1,10 +1,15 @@
 import pepita.*
 import comidas.*
+import wollok.game.*
 
 describe "Tests de Pepita" {
-
+	
+	method initialize() {
+		game.clear()
+	}
 
 	test "Al comer pepita aumenta su energia" {
+		game.addVisual(manzana)
 		pepita.comer(manzana)
 		assert.equals(105, pepita.energia())
 	}
