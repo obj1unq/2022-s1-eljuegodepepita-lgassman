@@ -10,10 +10,13 @@ program pepitaGame {
 	game.height(10)
 	game.width(10)
 	
-	game.addVisual(alpiste)
-	game.addVisual(manzana)
 	game.addVisual(silvestre)
+	game.addVisual(nido)
 	game.addVisual(pepita)
+	
+	game.addVisual(new Muro(position= game.at(5,4)))
+	game.addVisual(new Muro(position= game.at(6,4)))
+	
 	
 	keyboard.left().onPressDo( { pepita.mover(izquierda) } )
 	keyboard.right().onPressDo( { pepita.mover(derecha) } )
@@ -21,8 +24,13 @@ program pepitaGame {
 	keyboard.down().onPressDo( { pepita.mover(abajo) } )
 	//keyboard.c().onPressDo({ pepita.comer() })
 	
-	game.onCollideDo(alpiste, { comensal =>  comensal.comer(alpiste) } )
-	game.onCollideDo(manzana, { comensal =>  comensal.comer(manzana) } )
+	
+	game.onCollideDo(pepita, { algo => algo.teEncontro(pepita)  } )
+	
+	
+	game.onTick(800, "gravedad", {pepita.gravedad()})
+	game.onTick(3000, "generadorAlimento", {generadorAlimentos.generarAlimento()})
+	
 	
 	game.showAttributes(pepita)
 	game.start()

@@ -3,7 +3,7 @@ import comidas.*
 import wollok.game.*
 
 describe "Tests de Pepita" {
-	
+	const manzana = new Manzana()
 	method initialize() {
 		game.clear()
 	}

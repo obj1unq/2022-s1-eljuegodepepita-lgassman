@@ -1,12 +1,11 @@
 import wollok.game.*
 
-object manzana {
+class Manzana {
 	const base= 5
 	var madurez = 1
 	
-	method position() {
-		return  game.at(3,5)
-	}
+	var property position =game.at(3,5)
+	
 	
 	method image() {
 		return "manzana.png"
@@ -19,21 +18,36 @@ object manzana {
 	method madurar() {
 		madurez = madurez + 1
 	}
+	
+	method teEncontro(alguien) {
+		alguien.comer(self)
+	}
+
+	method atravesable() {
+		return true
+	}
 
 }
 
-object alpiste {
+class Alpiste {
+	
+	const peso = 20
+	const property position = game.at(2,3)
 
 	method energiaQueOtorga() {
-		return 20
+		return peso
 	} 
-	
-	method position() {
-		return game.at(2,3)
-	} 
-	
+		
 	method image() {
 		return "alpiste.png"
+	}
+
+	method teEncontro(alguien) {
+		alguien.comer(self)
+	}
+
+	method atravesable() {
+		return true
 	}
 
 }

@@ -15,8 +15,11 @@ Los alimentos aparecen de manera aleatoria en el juego.
 
 #### Colisión con comidas preestablecidas
 1. Hacer que pepita coma una comida cuando colisiona contra ella. Una vez comida la comida, debe desaparecer del juego. 
-2. Hacer que pueda haber diferentes manzanas. Cada manzana tiene su propia posición. 
-3. Pepita puede comer diferentes montoncitos de alpiste. Cada montoncito podrá tener peso diferente. La energia que aporta es de una caloría por cada gramo de peso.
+2. Hacer que pueda haber diferentes manzanas. 
+Cada manzana tiene su propia posición. 
+3. Pepita puede comer diferentes montoncitos de alpiste.
+ Cada montoncito podrá tener peso diferente.
+  La energia que aporta es de una caloría por cada gramo de peso.
    
 ### Aparición aleatoria de comidas
  
